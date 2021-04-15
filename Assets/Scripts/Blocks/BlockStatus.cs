@@ -5,7 +5,7 @@ using UnityEngine;
 public class BlockStatus : MonoBehaviour
 {
 
-    public bool isOn;
+    //public bool isOn;
 
     protected SpriteRenderer spr;
     protected BoxCollider2D col;
@@ -13,7 +13,7 @@ public class BlockStatus : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     protected int maxBlockHp = 2;
-    protected int blockHp;
+    public int blockHp;
 
     [SerializeField]
     List<Color> colors;
@@ -88,4 +88,9 @@ public class BlockStatus : MonoBehaviour
         col.enabled = false;
         spr.enabled = false;
     } 
+
+    public bool IsOn()
+    {
+        return spr.enabled;
+    }
 }

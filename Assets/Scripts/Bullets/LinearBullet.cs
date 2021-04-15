@@ -17,9 +17,7 @@ public class LinearBullet : Bullet
     private void Update()
     {
         if (active) {
-            Debug.Log(transform.position);
             transform.position += new Vector3(speed.x * Time.deltaTime, speed.y * Time.deltaTime, 0);
-            Debug.Log(transform.position);
             lifespan -= Time.deltaTime;
             if(lifespan < 0)
             {

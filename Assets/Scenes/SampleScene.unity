@@ -311,7 +311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461004857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.92, y: 3.94, z: 2487.846}
+  m_LocalPosition: {x: 0.92, y: 3.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1940461170}
@@ -404,8 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a6012a41e7b9e4aab3962983a78ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
   maxBlockHp: 2
+  blockHp: 0
   colors:
   - {r: 0.8018868, g: 0.4118451, b: 0, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
@@ -667,7 +667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601262296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.53, y: -0.01, z: 2487.846}
+  m_LocalPosition: {x: -1.53, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1940461170}
@@ -760,8 +760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a6012a41e7b9e4aab3962983a78ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
   maxBlockHp: 2
+  blockHp: 0
   colors:
   - {r: 0.8018868, g: 0.4118451, b: 0, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
@@ -4946,7 +4946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430784231}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.51, y: 0.94, z: 2487.846}
+  m_LocalPosition: {x: 1.51, y: 0.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1940461170}
@@ -5039,8 +5039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a6012a41e7b9e4aab3962983a78ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
   maxBlockHp: 2
+  blockHp: 0
   colors:
   - {r: 0.8018868, g: 0.4118451, b: 0, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
@@ -5252,8 +5252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a6012a41e7b9e4aab3962983a78ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
   maxBlockHp: 4
+  blockHp: 0
   colors: []
 --- !u!114 &1656666771
 MonoBehaviour:
@@ -5267,8 +5267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f08babe932bda247a190255c27dd92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
   maxBlockHp: 2
+  blockHp: 0
   colors:
   - {r: 0.745283, g: 0.48723722, b: 0, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
@@ -5300,7 +5300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658393031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.43, y: 2.49, z: 2487.846}
+  m_LocalPosition: {x: -1.43, y: 2.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1940461170}
@@ -5393,8 +5393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a6012a41e7b9e4aab3962983a78ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
   maxBlockHp: 2
+  blockHp: 0
   colors:
   - {r: 0.8018868, g: 0.4118451, b: 0, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
@@ -5494,7 +5494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794243793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.53, y: 5.16, z: 2487.846}
+  m_LocalPosition: {x: -1.53, y: 5.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1940461170}
@@ -5587,8 +5587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a6012a41e7b9e4aab3962983a78ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
   maxBlockHp: 2
+  blockHp: 0
   colors:
   - {r: 0.8018868, g: 0.4118451, b: 0, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
@@ -5939,7 +5939,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974600233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -1.3, z: 2487.846}
+  m_LocalPosition: {x: 1, y: -1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1940461170}
@@ -6032,8 +6032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a6012a41e7b9e4aab3962983a78ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
   maxBlockHp: 2
+  blockHp: 0
   colors:
   - {r: 0.8018868, g: 0.4118451, b: 0, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}

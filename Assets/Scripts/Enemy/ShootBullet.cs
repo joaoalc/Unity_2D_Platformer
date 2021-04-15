@@ -51,7 +51,6 @@ public class ShootBullet : MonoBehaviour
             yield return new WaitForSeconds(time_to_shoot);
         }
         if (!flipped) {
-            Debug.Log("abc");
             bullets[0].Shoot(transform.position, 4, new Vector2(5, 0));
         }
         else

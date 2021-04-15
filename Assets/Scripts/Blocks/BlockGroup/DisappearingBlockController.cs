@@ -38,7 +38,7 @@ public class DisappearingBlockController : MonoBehaviour
     {
         blocks = transform.GetComponentsInChildren<BlockStatus>();
         player = GameObject.FindGameObjectWithTag("Player");
-        for(int i = 0; i < blockObjs.Count; i++)
+        for(int i = 0; i < blocks.Length; i++)
         {
             blockObjs.Add(blocks[i].gameObject);
         }
@@ -111,27 +111,27 @@ public class DisappearingBlockController : MonoBehaviour
             newPos = basePos + diff;
             if (Vector2.Distance(player.transform.position, newPos) < 1)
                 valid = false;
-            /*else if(player.transform.position.y - newPos.y < -2)
+            else if(player.transform.position.y - newPos.y < 2 && player.transform.position.y - newPos.y > 0)
             {
                 if((player.transform.position.x - newPos.x) < 0.5f && (player.transform.position.x - newPos.x) > -0.5f)
                     valid = false;
-            }*/
+            }
             for(int i = 0; i < blockObjs.Count; i++)
             {
-                if (blocks[i].isOn && Vector2.Distance(blockObjs[i].transform.position, newPos) < 2f)
+                if (blocks[i].IsOn() && Vector2.Distance(blockObjs[i].transform.position, newPos) < 2f && blocks[i].blockHp >= 2 || blocks[i].IsOn() && Vector2.Distance(blockObjs[i].transform.position, newPos) < 1f)
                     valid = false;
             }
-            if (newPos.x > Camera.main.orthographicSize || newPos.x < -Camera.main.orthographicSize || newPos.y + 20 > (Camera.main.orthographicSize * 9 / 16) - 1 || newPos.y + 20 < -Camera.main.orthographicSize * 9 / 16)
+            if (newPos.x > Camera.main.orthographicSize || newPos.x < -Camera.main.orthographicSize || newPos.y + 22 > (Camera.main.orthographicSize * 9 / 16) - 1 || newPos.y + 22 < -Camera.main.orthographicSize * 9 / 16)
             {
                 valid = false;
             }
             numTries++;
             if(numTries >= 25 && !valid)
             {
-                diff = new Vector2(Random.Range(-4f, 4f), Random.Range(-3f, 2.5f));
+                diff = new Vector2(Random.Range(-3.5f, 3.5f), Random.Range(-3f, 2.5f));
                 newPos = new Vector2(player.transform.position.x, player.transform.position.y) + diff;
                 valid = true;
-                if (newPos.x > Camera.main.orthographicSize || newPos.x < -Camera.main.orthographicSize || newPos.y + 20 > (Camera.main.orthographicSize * 9 / 16) - 1 || newPos.y + 20 < -Camera.main.orthographicSize * 9 / 16)
+                if (newPos.x > Camera.main.orthographicSize || newPos.x < -Camera.main.orthographicSize || newPos.y + 22 > (Camera.main.orthographicSize * 9 / 16) - 1 || newPos.y + 22 < -Camera.main.orthographicSize * 9 / 16)
                 {
                     valid = false;
                 }
