@@ -47,6 +47,12 @@ public class ParaboleBullet : Bullet
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         col = gameObject.GetComponent<BoxCollider2D>();
         spr = gameObject.GetComponent<SpriteRenderer>();
+
+        if (knockbackForce == null || knockbackForce == Vector2.zero)
+        {
+            knockbackForce = new Vector2(350, 200);
+        }
+        base.Start();
     }
 
     // Update is called once per frame
@@ -79,23 +85,28 @@ public class ParaboleBullet : Bullet
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            if(rb2d.velocity.y > 0)
+            if (playerIFrames.TriggerInvincibility())
             {
-                if (col.GetComponent<Rigidbody2D>().velocity.y < 0)
+                if (rb2d.velocity.y > 0)
                 {
-                    col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
+                    if (col.GetComponent<Rigidbody2D>().velocity.y < 0)
+                    {
+                        col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
+                    }
+                    col.GetComponent<Rigidbody2D>().AddForce(new Vector2(-knockbackForce.x, knockbackForce.y));
+                    playerIFrames.TriggerInvincibility();
+                    Deactivate();
                 }
-                col.GetComponent<Rigidbody2D>().AddForce(new Vector2(-350, 200));
-                Deactivate();
-            }
-            else
-            {
-                if (col.GetComponent<Rigidbody2D>().velocity.y < 0)
+                else
                 {
-                    col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
+                    if (col.GetComponent<Rigidbody2D>().velocity.y < 0)
+                    {
+                        col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
+                    }
+                    col.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackForce.x, knockbackForce.y));
+                    playerIFrames.TriggerInvincibility();
+                    Deactivate();
                 }
-                col.GetComponent<Rigidbody2D>().AddForce(new Vector2(350, 200));
-                Deactivate();
             }
         }
     }

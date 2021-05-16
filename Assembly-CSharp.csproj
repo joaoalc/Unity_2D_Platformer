@@ -97,6 +97,7 @@
     <Compile Include="Assets\Scripts\Enemy\AI\Slime\SlimeStateController.cs" />
     <Compile Include="Assets\Scripts\Enemy\AI\Slime\SlimeWaiting.cs" />
     <Compile Include="Assets\Scripts\Enemy\ShootBullet.cs" />
+    <Compile Include="Assets\Scripts\Player\InvincibilityFrames.cs" />
     <Compile Include="Assets\Scripts\Player\Player_States\PlayerBaseState.cs" />
     <Compile Include="Assets\Scripts\Player\Player_States\PlayerJumpingState.cs" />
     <Compile Include="Assets\Scripts\Player\Player_States\PlayerMovingState.cs" />

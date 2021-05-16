@@ -4,10 +4,15 @@ using UnityEngine;
 
 public abstract class Bullet : MonoBehaviour
 {
+
+    protected InvincibilityFrames playerIFrames;
+
+    [SerializeField] protected Vector2 knockbackForce;
+
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
-        
+        playerIFrames = GameObject.FindGameObjectWithTag("Player").GetComponent<InvincibilityFrames>();
     }
 
     // Update is called once per frame

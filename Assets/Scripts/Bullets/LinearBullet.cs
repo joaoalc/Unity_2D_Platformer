@@ -7,7 +7,22 @@ public class LinearBullet : Bullet
     public Vector2 speed = Vector2.zero;
     public float lifespan = 0;
 
-    bool active;
+    public SpriteRenderer spr;
+    public Collider2D col;
+
+    bool active = false;
+
+    private void Start()
+    {
+        spr = GetComponent<SpriteRenderer>();
+        col = GetComponent<Collider2D>();
+        spr.enabled = false;
+        col.enabled = false;
+        if(knockbackForce == null || knockbackForce == Vector2.zero) { 
+            knockbackForce = new Vector2(350, 200);
+        }
+        base.Start();
+    }
 
     public bool getActive()
     {
@@ -21,7 +36,7 @@ public class LinearBullet : Bullet
             lifespan -= Time.deltaTime;
             if(lifespan < 0)
             {
-                active = false;
+                Deactivate();
             }
         }
     }
@@ -32,9 +47,24 @@ public class LinearBullet : Bullet
         if (!active) { 
             transform.position = position;
             this.speed = speed;
-            active = true;
+            Activate();
             this.lifespan = maxLifespan;
         }
+    }
+
+    public void Activate()
+    {
+        active = true;
+        spr.enabled = true;
+        col.enabled = true;
+    }
+
+
+    public void Deactivate()
+    {
+        active = false;
+        spr.enabled = false;
+        col.enabled = false;
     }
 
     override
@@ -42,21 +72,26 @@ public class LinearBullet : Bullet
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            if(this.speed.x > 0)
+            if (playerIFrames.TriggerInvincibility())
             {
-                if(col.GetComponent<Rigidbody2D>().velocity.y < 0) { 
-                    col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
-                }
-                col.GetComponent<Rigidbody2D>().AddForce(new Vector2(350, 200));
-            }
-            else
-            {
-                if (col.GetComponent<Rigidbody2D>().velocity.y < 0)
+                if (this.speed.x > 0)
                 {
-                    col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
+                    if (col.GetComponent<Rigidbody2D>().velocity.y < 0)
+                    {
+                        col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
+                    }
+                    col.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackForce.x, knockbackForce.y));
                 }
-                col.GetComponent<Rigidbody2D>().AddForce(new Vector2(-350, 200));
+                else
+                {
+                    if (col.GetComponent<Rigidbody2D>().velocity.y < 0)
+                    {
+                        col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
+                    }
+                    col.GetComponent<Rigidbody2D>().AddForce(new Vector2(-knockbackForce.x, knockbackForce.y));
+                }
             }
+            Deactivate();
         }
     }
 

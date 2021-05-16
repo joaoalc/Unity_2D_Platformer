@@ -557,6 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3c592c1a1ae224c8bab8a47dd77722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackForce: {x: 0, y: 0}
   rb2d: {fileID: 503821367}
   col: {fileID: 503821369}
   spr: {fileID: 503821370}
@@ -1163,8 +1164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b92eb7d054dfc49b4f78a75a200451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackForce: {x: 0, y: 0}
   speed: {x: 0, y: 0}
   lifespan: 0
+  spr: {fileID: 0}
+  col: {fileID: 0}
 --- !u!61 &613117227
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1240,6 +1244,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &707248924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8504072368517997500, guid: 314d562df473acf478a9a1e4032dc82c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2002941887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &707248933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707248924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5842c190317cda4fb3ae7fe70f5603b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &725389747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4313,8 +4335,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b92eb7d054dfc49b4f78a75a200451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackForce: {x: 0, y: 0}
   speed: {x: 0, y: 0}
   lifespan: 0
+  spr: {fileID: 0}
+  col: {fileID: 0}
 --- !u!61 &1253177086
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5986,8 +6011,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b92eb7d054dfc49b4f78a75a200451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackForce: {x: 0, y: 0}
   speed: {x: 0, y: 0}
   lifespan: 0
+  spr: {fileID: 0}
+  col: {fileID: 0}
 --- !u!1 &1825304271
 GameObject:
   m_ObjectHideFlags: 0
@@ -6456,6 +6484,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: cb39e8e0f4c8e3a46ab668cc3c3a4d2e, type: 2}
+    - target: {fileID: 8504072368517997377, guid: 314d562df473acf478a9a1e4032dc82c,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 314d562df473acf478a9a1e4032dc82c, type: 3}
 --- !u!1 &2024444855
