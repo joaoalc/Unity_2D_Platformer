@@ -5,6 +5,8 @@ using UnityEngine;
 public class ShootBullet : MonoBehaviour
 {
     [SerializeField]
+    float lifespan = 4;
+    [SerializeField]
     float time_to_shoot = 5;
     [SerializeField]
     bool flipped = false;
@@ -14,6 +16,8 @@ public class ShootBullet : MonoBehaviour
 
     List<Bullet> bullets = new List<Bullet>();
 
+    [SerializeField]
+    Vector2 bulletSpeed = new Vector2(5, 0);
 
 
     // Start is called before the first frame update
@@ -51,11 +55,11 @@ public class ShootBullet : MonoBehaviour
             yield return new WaitForSeconds(time_to_shoot);
         }
         if (!flipped) {
-            bullets[0].Shoot(transform.position, 4, new Vector2(5, 0));
+            bullets[0].Shoot(transform.position, lifespan, bulletSpeed);
         }
         else
         {
-            bullets[0].Shoot(transform.position, 4, new Vector2(-5, 0));
+            bullets[0].Shoot(transform.position, lifespan, new Vector2(-bulletSpeed.x, bulletSpeed.y));
         }
         //bullets[0].transform.localPosition = Vector3.zero;
         //bullets[0].GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);

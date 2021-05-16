@@ -15,5 +15,19 @@ public abstract class Bullet : MonoBehaviour
     {
         
     }
-    abstract public void Shoot(Vector2 position, float maxLifespan, Vector2 speed);
+    virtual public void Shoot(Vector2 position, float maxLifespan, Vector2 speed) {
+        Debug.LogError("Lmao no");
+    }
+
+    virtual public void Shoot(Vector2 position, float maxLifespan, float gravity, Vector2 initialSpeed)
+    {
+        Debug.LogError("Lmao no");
+
+    }
+
+    virtual protected void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.LogError("Lmao nice OnTriggerEnter2D");
+    }
+
 }

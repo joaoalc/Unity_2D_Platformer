@@ -7,7 +7,14 @@ public class PlayerWallState : PlayerBaseState
     public string wallDirection = "";
     public override void EnterState(PlayerController_FSM player)
     {
-        player.AnimationController.ChangeAnimationState(PlayerAnimationController.PLAYER_WALL);
+        if(player.Rigidbody.velocity.y >= -0.0001)
+        {
+            player.AnimationController.ChangeAnimationState(PlayerAnimationController.PLAYER_WALL_UP);
+        }
+        else
+        {
+            player.AnimationController.ChangeAnimationState(PlayerAnimationController.PLAYER_WALL_DOWN);
+        }
 
         player.Rigidbody.gravityScale = 0f;
         player.CurrentWallJumpGrace = 0f;
@@ -75,6 +82,15 @@ public class PlayerWallState : PlayerBaseState
         {
             player.CurrentWallJumpGrace = player.WallJumpGracePeriod;
             player.TransitionToState(player.JumpingState);
+        }
+
+        if (player.Rigidbody.velocity.y >= -0.0001)
+        {
+            player.AnimationController.ChangeAnimationState(PlayerAnimationController.PLAYER_WALL_UP);
+        }
+        else
+        {
+            player.AnimationController.ChangeAnimationState(PlayerAnimationController.PLAYER_WALL_DOWN);
         }
     }
 

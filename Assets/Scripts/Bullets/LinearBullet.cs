@@ -36,4 +36,28 @@ public class LinearBullet : Bullet
             this.lifespan = maxLifespan;
         }
     }
+
+    override
+    protected void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            if(this.speed.x > 0)
+            {
+                if(col.GetComponent<Rigidbody2D>().velocity.y < 0) { 
+                    col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
+                }
+                col.GetComponent<Rigidbody2D>().AddForce(new Vector2(350, 200));
+            }
+            else
+            {
+                if (col.GetComponent<Rigidbody2D>().velocity.y < 0)
+                {
+                    col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
+                }
+                col.GetComponent<Rigidbody2D>().AddForce(new Vector2(-350, 200));
+            }
+        }
+    }
+
 }

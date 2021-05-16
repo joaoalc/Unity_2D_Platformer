@@ -136,6 +136,14 @@ public class PlayerJumpingState : PlayerBaseState
             player.Rigidbody.gravityScale = player.FallGrav;
         }
 
+        if (player.Rigidbody.velocity.y > 0)
+        {
+            player.AnimationController.ChangeAnimationState(PlayerAnimationController.PLAYER_JUMPING_UP);
+        }
+        else
+        {
+            player.AnimationController.ChangeAnimationState(PlayerAnimationController.PLAYER_JUMPING_DOWN);
+        }
     }
 }
 

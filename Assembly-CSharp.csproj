@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\Blocks\SingleBlock.cs" />
     <Compile Include="Assets\Scripts\Bullets\Bullet.cs" />
     <Compile Include="Assets\Scripts\Bullets\LinearBullet.cs" />
+    <Compile Include="Assets\Scripts\Bullets\ParaboleBullet.cs" />
     <Compile Include="Assets\Scripts\Enemy\AI\Slime\Slime_Idle.cs" />
     <Compile Include="Assets\Scripts\Enemy\AI\Slime\Slime_Jump.cs" />
     <Compile Include="Assets\Scripts\Enemy\AI\Slime\SlimeBaseState.cs" />
