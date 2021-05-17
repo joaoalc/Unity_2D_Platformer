@@ -87,11 +87,11 @@ public class ParaboleBullet : Bullet
         {
             if (playerIFrames.TriggerInvincibility())
             {
-                if (rb2d.velocity.y > 0)
+                if (rb2d.velocity.x > 0)
                 {
                     if (col.GetComponent<Rigidbody2D>().velocity.y < 0)
                     {
-                        col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
+                        col.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
                     }
                     col.GetComponent<Rigidbody2D>().AddForce(new Vector2(-knockbackForce.x, knockbackForce.y));
                     playerIFrames.TriggerInvincibility();
@@ -101,7 +101,7 @@ public class ParaboleBullet : Bullet
                 {
                     if (col.GetComponent<Rigidbody2D>().velocity.y < 0)
                     {
-                        col.GetComponent<Rigidbody2D>().velocity = new Vector2(col.GetComponent<Rigidbody2D>().velocity.x, 0);
+                        col.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
                     }
                     col.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockbackForce.x, knockbackForce.y));
                     playerIFrames.TriggerInvincibility();
