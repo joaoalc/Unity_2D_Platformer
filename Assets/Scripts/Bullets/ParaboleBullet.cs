@@ -87,7 +87,7 @@ public class ParaboleBullet : Bullet
         {
             if (playerIFrames.TriggerInvincibility())
             {
-                if (rb2d.velocity.x > 0)
+                if (rb2d.velocity.x < 0)
                 {
                     if (col.GetComponent<Rigidbody2D>().velocity.y < 0)
                     {
