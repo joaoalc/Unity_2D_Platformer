@@ -1,8 +1,15 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BlockStatus
+    - DisappearingBlockController
+    - InvincibilityFrames
+    - LinearBullet
+    - ParaboleBullet
     - PlayerAnimationController
     - PlayerController_FSM
+    - ShootBullet
+    - SingleBlock
     - SlimeStateController
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
@@ -64,19 +71,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 582}
     - Class: 114
-      Script: {instanceID: 10426}
+      Script: {instanceID: 10376}
     - Class: 114
-      Script: {instanceID: 10532}
+      Script: {instanceID: 10428}
     - Class: 114
-      Script: {instanceID: 10608}
+      Script: {instanceID: 10516}
     - Class: 114
-      Script: {instanceID: 10718}
+      Script: {instanceID: 10536}
     - Class: 114
-      Script: {instanceID: 11188}
+      Script: {instanceID: 10612}
     - Class: 114
-      Script: {instanceID: 11558}
+      Script: {instanceID: 10700}
     - Class: 114
-      Script: {instanceID: 11820}
+      Script: {instanceID: 10724}
+    - Class: 114
+      Script: {instanceID: 10926}
+    - Class: 114
+      Script: {instanceID: 11098}
+    - Class: 114
+      Script: {instanceID: 11198}
+    - Class: 114
+      Script: {instanceID: 11416}
+    - Class: 114
+      Script: {instanceID: 11572}
+    - Class: 114
+      Script: {instanceID: 11786}
+    - Class: 114
+      Script: {instanceID: 11836}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -384,6 +405,12 @@ ScriptsOnlyBuild:
     className: CinemachineConfiner2D
   - hash:
       serializedVersion: 2
+      Hash: 900742a17f8217bd346274a25fa62963
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShootBullet
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -442,6 +469,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachinePOV
+  - hash:
+      serializedVersion: 2
+      Hash: ab9ad4bab2ebd1373dba4cca593cbc95
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisappearingBlockController
   - hash:
       serializedVersion: 2
       Hash: 605879ae8a51846c27ba034f03fca9f0
@@ -516,6 +549,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 835374230190fcb62f99483ac095983c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LinearBullet
+  - hash:
+      serializedVersion: 2
       Hash: 204ea02909ea3f738dafe3ff633d2a93
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -562,6 +601,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineTargetGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InvincibilityFrames
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -616,6 +661,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineMixingCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 96f71e25933ac2eefe5a427c3c010586
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BlockStatus
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -718,6 +769,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine.PostFX
     className: CinemachineVolumeSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 96394f72238e0db5792d5cad7d4ec4e5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ParaboleBullet
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -846,6 +903,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 6553750bee724e5bb2269e345bffd442
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SingleBlock
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -955,5 +1018,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/joaoa/Documents/Faculdade/Games_n_such/Platformer Jan 2021/Builds/Platformer
-    Jan 2021.exe
+  playerPath: C:/Users/joaoa/Documents/Faculdade/Games_n_such/Platformer_Jan_2021/Unity_2D_Platformer/Builds/Unity_2D_Platformer.exe
