@@ -5,6 +5,9 @@ using UnityEngine;
 public class BlockStatus : MonoBehaviour
 {
 
+    static readonly string startAnimationPath = "Animations/Block/Start";
+    static readonly string endAnimationPath = "Animations/Block/End";
+
     //public bool isOn;
 
     protected SpriteRenderer spr;
@@ -18,6 +21,10 @@ public class BlockStatus : MonoBehaviour
     [SerializeField]
     List<Color> colors;
 
+    [SerializeField]
+    bool hasAnimation = false;
+    Animation startAnimation;
+    Animation endAnimation;
 
     protected GameObject player;
     protected Rigidbody2D playerRb;
@@ -28,6 +35,17 @@ public class BlockStatus : MonoBehaviour
         spr = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerRb = player.GetComponent<Rigidbody2D>();
+
+        //Check if there's an animation when there's supposed to be one
+        if(hasAnimation == true)
+        {
+            startAnimation = (Animation) Resources.Load("Animations/Block/Start");
+            endAnimation = (Animation) Resources.Load("Animations/Block/End");
+            if (startAnimation == null)
+            {
+                Debug.LogError("No animation set!");
+            }
+        }
     }
 
     protected bool runningCoroutine = false;
@@ -60,6 +78,11 @@ public class BlockStatus : MonoBehaviour
 
     public bool ActivateBlock(Vector2 newPosition)
     {
+        if (hasAnimation)
+        {
+            startAnimation.Play();
+        }
+
         transform.position = newPosition;
         if (col.enabled || spr.enabled)
         {

@@ -106,8 +106,24 @@ public class PlayerController_FSM : MonoBehaviour
     {
         get { return wallJumpForce; }
     }
+
+    [SerializeField] private float minSlideSpeed = -4.5f;
+
+    public float MinSlideSpeed
+    {
+        get { return minSlideSpeed; }
+    }
+
+    [SerializeField] private float maxSlideSpeed = 15f;
+
+    public float MaxSlideSpeed
+    {
+        get { return maxSlideSpeed; }
+    }
+
+
     #endregion
-    
+
     [SerializeField] float detectGroundOnJump = 0.05f;
 
     public float DetectGroundOnJump
@@ -138,9 +154,21 @@ public class PlayerController_FSM : MonoBehaviour
 
     #endregion
 
+    #region Audio
+
+    PlayerAudioController audioController;
+    public PlayerAudioController AudioController
+    {
+        get { return audioController; }
+    }
+
+
+    #endregion
+
     private void Awake()
     {
         animationController = GetComponent<PlayerAnimationController>();
+        audioController = GetComponent<PlayerAudioController>();
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
         boxCol = gameObject.GetComponent<BoxCollider2D>();
     }
@@ -155,7 +183,6 @@ public class PlayerController_FSM : MonoBehaviour
     void Update()
     {
         //Debug.Log(Rigidbody.gravityScale);
-        //Debug.Log(currentState.ToString());
         if (CurrentWallJumpGrace > 0)
         {
             CurrentWallJumpGrace -= Time.deltaTime;

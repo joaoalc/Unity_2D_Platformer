@@ -72,6 +72,7 @@ public class LinearBullet : Bullet
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            setPlayerIFrames(col.gameObject);
             if (playerIFrames.TriggerInvincibility())
             {
                 if (this.speed.x > 0)

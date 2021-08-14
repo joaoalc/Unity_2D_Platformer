@@ -12,7 +12,12 @@ public abstract class Bullet : MonoBehaviour
     // Start is called before the first frame update
     protected void Start()
     {
-        playerIFrames = GameObject.FindGameObjectWithTag("Player").GetComponent<InvincibilityFrames>();
+        //playerIFrames = GameObject.FindGameObjectWithTag("Player").GetComponent<InvincibilityFrames>();
+    }
+
+    protected void setPlayerIFrames(GameObject player)
+    {
+        playerIFrames = player.GetComponent<InvincibilityFrames>();
     }
 
     // Update is called once per frame

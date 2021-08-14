@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - BulletHolder
+  - TimeSlider
+  - TimeText
+  - TimeText2
+  - EndUI
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - Enemy
   - Character
   - EnemyBullet
-  - 
+  - BounceGround
   - 
   - 
   - 

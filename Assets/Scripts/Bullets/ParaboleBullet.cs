@@ -85,6 +85,7 @@ public class ParaboleBullet : Bullet
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            setPlayerIFrames(col.gameObject);
             if (playerIFrames.TriggerInvincibility())
             {
                 if (rb2d.velocity.x < 0)

@@ -66,4 +66,10 @@ public class ShootBullet : MonoBehaviour
         running_coroutine = false;
     }
 
+    public void Flip()
+    {
+        flipped = !flipped;
+        transform.localScale = new Vector3(-1, 1);
+    }
+
 }

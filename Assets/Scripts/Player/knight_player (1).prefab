@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8504072368517997379}
   - component: {fileID: 8504072368517997378}
   - component: {fileID: 8504072368517997501}
+  - component: {fileID: 5076254696109487494}
   m_Layer: 8
   m_Name: knight_player (1)
   m_TagString: Player
@@ -147,6 +148,8 @@ MonoBehaviour:
   wallSlideSpeed: 2.5
   wallJumpGracePeriod: 0.1
   wallJumpForce: {x: 3.25, y: 7}
+  minSlideSpeed: -4.5
+  maxSlideSpeed: 15
   detectGroundOnJump: 0.05
 --- !u!61 &8504072368517997379
 BoxCollider2D:
@@ -205,3 +208,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8423f9e66ab63784691679e130c0a149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5076254696109487494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504072368517997500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1044e70e3d3af6344aa8da8394139cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PLAYER_JUMP: {fileID: 0}
+  PLAYER_RUNNING: {fileID: 0}
+  PLAYER_WALLJUMP: {fileID: 0}
+  PLAYER_HIT_WALL: {fileID: 0}
+  PLAYER_HIT_FLOOR: {fileID: 0}
